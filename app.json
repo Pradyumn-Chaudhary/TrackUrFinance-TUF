@@ -20,11 +20,16 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.thepradyumnchaudhary.TrackUrFinanceTUF"
     },
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
-    }
+    },
+    "plugins": [
+      "@react-native-community/datetimepicker",
+      "@react-native-async-storage/expo-with-async-storage"
+    ]
   }
 }

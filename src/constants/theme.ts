@@ -1,4 +1,4 @@
-export const Colors = {
+export const BaseColors = {
   primary: "#4F46E5",
   primaryDark: "#4338CA",
   primaryLight: "#818CF8",
@@ -7,52 +7,68 @@ export const Colors = {
   secondaryLight: "#60A5FA",
   accent: "#10B981",
   error: "#F43F5E",
-  background: "#0F172A",
-  surface: "#1E293B",
-  muted: "#64748B",
   white: "#FFFFFF",
   black: "#000000",
-  slate: {
-    50: "#F8FAFC",
-    100: "#F1F5F9",
-    200: "#E2E8F0",
-    300: "#CBD5E1",
-    400: "#94A3B8",
-    500: "#64748B",
-    600: "#475569",
-    700: "#334155",
-    800: "#1E293B",
-    900: "#0F172A",
+};
+
+export const DarkTheme = {
+  colors: {
+    ...BaseColors,
+    background: "#0F172A",
+    surface: "#1E293B",
+    text: "#FFFFFF",
+    textMuted: "#94A3B8",
+    border: "rgba(255, 255, 255, 0.1)",
+    muted: "#1E293B",
+  },
+  gradients: {
+    background: ["#0F172A", "#1E293B"],
+    surface: ["#1E293B", "#0F172A"],
+    primary: [BaseColors.primary, BaseColors.secondary],
   },
 };
 
-export const Gradients = {
-  primary: [Colors.primary, Colors.secondary],
-  dark: [Colors.background, Colors.surface],
-  emerald: ["#10B981", "#34D399"],
-  rose: ["#F43F5E", "#FB7185"],
+export const LightTheme = {
+  colors: {
+    ...BaseColors,
+    background: "#F8FAFC",
+    surface: "#FFFFFF",
+    text: "#0F172A",
+    textMuted: "#64748B",
+    border: "rgba(0, 0, 0, 0.05)",
+    muted: "#F1F5F9",
+  },
+  gradients: {
+    background: ["#F8FAFC", "#E2E8F0"],
+    surface: ["#FFFFFF", "#F8FAFC"],
+    primary: [BaseColors.primary, BaseColors.secondary],
+  },
 };
+
+// For backward compatibility and shared tokens
+export const Colors = DarkTheme.colors;
+export const Gradients = DarkTheme.gradients;
 
 export const Shadows = {
   sm: {
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.18,
-    shadowRadius: 1.0,
-    elevation: 1,
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
   },
   md: {
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 4,
   },
   lg: {
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4.65,
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.1,
+    shadowRadius: 15,
     elevation: 8,
   },
 };

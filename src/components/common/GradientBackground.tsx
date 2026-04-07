@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, ViewProps } from "react-native";
+import { ViewProps } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useTheme } from "../../context/ThemeContext";
 
@@ -12,23 +12,19 @@ export const GradientBackground: React.FC<GradientBackgroundProps> = ({
   colors,
   children,
   style,
+  className,
   ...props
 }) => {
   const { gradients } = useTheme();
 
   return (
     <LinearGradient
-      colors={(colors as any) || gradients.dark}
-      style={[styles.container, style]}
+      colors={(colors as any) || gradients.background}
+      style={style}
+      className={`flex-1 ${className}`}
       {...props}
     >
       {children}
     </LinearGradient>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
