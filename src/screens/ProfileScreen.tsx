@@ -5,11 +5,8 @@ import {
   Sun,
   Moon,
   CreditCard,
-  Shield,
   Bell,
-  Info,
   LogOut,
-  HelpCircle,
   Database,
   CheckCircle,
 } from "lucide-react-native";
@@ -134,55 +131,23 @@ const ProfileScreen = () => {
                 icon={CreditCard}
                 description={currency}
                 onPress={() => setShowCurrencyModal(true)}
+                isLast
               />
             </View>
           </View>
 
           <View className="mb-8">
             <Text className="text-slate-500 font-jakarta-bold text-xs uppercase tracking-widest mb-2 ml-1">
-              Account & Security
+              Account & Notifications
             </Text>
             <View
               className={`${sectionBg} rounded-3xl p-2 border ${sectionBorder} shadow-sm`}
             >
-              <SettingsItem
-                label="Security"
-                icon={Shield}
-                description="Fingerprint & PIN"
-                onPress={() =>
-                  Alert.alert("Security", "Biometric settings coming soon!")
-                }
-              />
               <SettingsItem
                 label="Notifications"
                 icon={Bell}
                 description="Daily reminders"
                 onPress={() => setShowNotifModal(true)}
-              />
-            </View>
-          </View>
-
-          <View className="mb-8">
-            <Text className="text-slate-500 font-jakarta-bold text-xs uppercase tracking-widest mb-2 ml-1">
-              Support
-            </Text>
-            <View
-              className={`${sectionBg} rounded-3xl p-2 border ${sectionBorder} shadow-sm`}
-            >
-              <SettingsItem
-                label="Help Center"
-                icon={HelpCircle}
-                onPress={() =>
-                  Alert.alert("Support", "Help Center coming soon!")
-                }
-              />
-              <SettingsItem
-                label="About TUF"
-                icon={Info}
-                description="v1.0.4 - Premium"
-                onPress={() =>
-                  Alert.alert("About", "TrackUrFinance v1.0.4\nFintech Edition")
-                }
                 isLast
               />
             </View>
@@ -250,14 +215,21 @@ const ProfileScreen = () => {
             </TouchableOpacity>
           </View>
 
-          <View className="mt-4">
-            <SettingsItem
-              label="Sign Out"
-              icon={LogOut}
-              isDestructive
-              isLast
-              onPress={handleSignOut}
-            />
+          <View className="mb-8">
+            <Text className="text-slate-500 font-jakarta-bold text-xs uppercase tracking-widest mb-2 ml-1">
+              Session
+            </Text>
+            <View
+              className={`${sectionBg} rounded-3xl p-2 border ${sectionBorder} shadow-sm`}
+            >
+              <SettingsItem
+                label="Sign Out"
+                icon={LogOut}
+                isDestructive
+                isLast
+                onPress={handleSignOut}
+              />
+            </View>
           </View>
 
           <View className="mt-10 items-center">

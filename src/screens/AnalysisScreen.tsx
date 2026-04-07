@@ -14,6 +14,7 @@ import { CATEGORIES } from "../constants/categories";
 import { EmptyState } from "../components/common/EmptyState";
 import { SweepPieChart } from "../components/analysis/SweepPieChart";
 import Animated, { useAnimatedStyle } from "react-native-reanimated";
+import { LinearGradient } from "expo-linear-gradient";
 
 const MONTHS = [
   "Jan",
@@ -320,7 +321,25 @@ const AnalysisScreen = () => {
             </View>
 
             {/* Summary Row */}
-            <View className="bg-primary/10 rounded-3xl p-5 border border-primary/20 flex-row justify-between mb-6">
+            <LinearGradient
+              colors={[
+                isDarkMode ? colors.primary + "40" : colors.primary + "15",
+                isDarkMode ? colors.secondary + "20" : colors.secondary + "05",
+              ]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              style={{
+                borderRadius: 24,
+                padding: 20,
+                flexDirection: "row",
+                justifyContent: "space-between",
+                marginBottom: 24,
+                borderWidth: 1,
+                borderColor: isDarkMode
+                  ? "rgba(255,255,255,0.05)"
+                  : "rgba(79, 70, 229, 0.1)",
+              }}
+            >
               <View>
                 <Text className="text-slate-500 font-jakarta-bold text-[10px] uppercase tracking-wider mb-1">
                   Income
@@ -353,7 +372,7 @@ const AnalysisScreen = () => {
                   }
                 </Text>
               </View>
-            </View>
+            </LinearGradient>
 
             {/* Transactions Section */}
             <View className="flex-row justify-between items-center mb-4">

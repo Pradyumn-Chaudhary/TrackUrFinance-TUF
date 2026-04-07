@@ -10,6 +10,7 @@ import { useAuthStore } from "../store/useAuthStore";
 import { useModalStore } from "../store/useModalStore";
 import { EmptyState } from "../components/common/EmptyState";
 import { Wallet } from "lucide-react-native";
+import { BalanceCard } from "../components/home/BalanceCard";
 
 const HomeScreen = () => {
   const { currency, isDarkMode } = useTheme();
@@ -64,36 +65,11 @@ const HomeScreen = () => {
                 </Text>
               </View>
 
-              <View
-                className={`${cardBg} rounded-3xl p-6 border ${cardBorder} shadow-2xl`}
-              >
-                <Text className="font-jakarta-medium text-slate-400">
-                  Total Balance
-                </Text>
-                <Text
-                  className={`font-jakarta-extrabold ${titleColor} text-4xl my-2`}
-                >
-                  {formatCurrency(totalBalance, currency)}
-                </Text>
-                <View className="flex-row justify-between mt-4">
-                  <View>
-                    <Text className="font-jakarta-medium text-slate-400 text-xs text-center">
-                      Income
-                    </Text>
-                    <Text className="font-jakarta-bold text-accent text-lg">
-                      +{formatCurrency(totalIncome, currency).split(".")[0]}
-                    </Text>
-                  </View>
-                  <View>
-                    <Text className="font-jakarta-medium text-slate-400 text-xs text-center">
-                      Expenses
-                    </Text>
-                    <Text className="font-jakarta-bold text-error text-lg">
-                      -{formatCurrency(totalExpense, currency).split(".")[0]}
-                    </Text>
-                  </View>
-                </View>
-              </View>
+              <BalanceCard
+                totalBalance={totalBalance}
+                totalIncome={totalIncome}
+                totalExpense={totalExpense}
+              />
 
               <View className="flex-row justify-between items-center mt-10 mb-4">
                 <Text className={`font-jakarta-bold ${titleColor} text-xl`}>

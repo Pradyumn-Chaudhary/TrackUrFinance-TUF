@@ -21,7 +21,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.thepradyumnchaudhary.TrackUrFinanceTUF"
+      "package": "com.TrackUrFinanceTUF"
     },
     "web": {
       "favicon": "./assets/favicon.png",
