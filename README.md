@@ -23,11 +23,13 @@
 
 ## 📱 App Screens
 
-|                            Home Screen                            |                             Analysis Insights                             |                            Profile Settings                             |
-| :---------------------------------------------------------------: | :-----------------------------------------------------------------------: | :---------------------------------------------------------------------: |
-| ![Home](https://via.placeholder.com/300x600.png?text=Home+Screen) | ![Analysis](https://via.placeholder.com/300x600.png?text=Analysis+Screen) | ![Profile](https://via.placeholder.com/300x600.png?text=Profile+Screen) |
+|                Home Screen                 |               Analysis (Category)               |               Analysis (Monthly)                |
+| :----------------------------------------: | :---------------------------------------------: | :---------------------------------------------: |
+| <img src="assets/Home.png" height="550" /> | <img src="assets/AnalysisC.png" height="550" /> | <img src="assets/AnalysisM.png" height="550" /> |
 
-_Note: High-resolution screenshots coming soon._
+|                  Transaction List                  |                   Add Transaction                    |               Profile Settings                |
+| :------------------------------------------------: | :--------------------------------------------------: | :-------------------------------------------: |
+| <img src="assets/Transactions.png" height="550" /> | <img src="assets/addTransaction.png" height="550" /> | <img src="assets/Profile.png" height="550" /> |
 
 ---
 
@@ -56,7 +58,7 @@ _Note: High-resolution screenshots coming soon._
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/trackurfinance-tuf.git
+   git clone https://github.com/Pradyumn-Chaudhary/trackurfinance-tuf.git
    cd trackurfinance-tuf
    ```
 
@@ -81,8 +83,8 @@ _Note: High-resolution screenshots coming soon._
 
 ## 📥 Download & Demo
 
-- **Download**: [Download TUF Preview v1.0.4 (Dummy Link)](https://example.com/download/tuf-latest.apk)
-- **Demo Video**: [Watch App Demo (Dummy Link)](https://example.com/demo-video)
+- **Download**: [Download TUF Preview v1.0.0](https://github.com/Pradyumn-Chaudhary/TrackUrFinance-TUF/releases/download/v1.0.0/TrackUrFinance-TUF.apk)
+- **Demo Video**: [Watch App Demo](https://youtube.com/shorts/l30l3kqR2h8?si=4_2mBtijm8hwI7tB)
 
 ---
 
@@ -111,4 +113,3 @@ Contributions are what make the open-source community such an amazing place to l
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
