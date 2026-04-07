@@ -84,7 +84,7 @@
 ## 📥 Download & Demo
 
 - **Download**: [Download TUF Preview v1.0.0](https://github.com/Pradyumn-Chaudhary/TrackUrFinance-TUF/releases/download/v1.0.0/TrackUrFinance-TUF.apk)
-- **Demo Video**: [Watch App Demo](https://youtube.com/shorts/l30l3kqR2h8?si=4_2mBtijm8hwI7tB)
+- **Demo Video**: [Watch App Demo](https://drive.google.com/file/d/1iyRzu_0BeffUlp2pIP0ANUDcuWB51ppz/view?usp=drivesdk)
 
 ---
 
